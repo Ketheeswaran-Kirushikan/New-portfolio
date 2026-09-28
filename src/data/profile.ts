@@ -14,6 +14,7 @@ import gasByGas from "../assets/g.png";
 import proShine from "../assets/p.png";
 import vanforce from "../assets/vanforce.png";
 import prettyWoman from "../assets/pretty-woman.png";
+import restaurantTemplates from "../assets/restaurant-templates.webp";
 import crickChat from "../assets/c.png";
 import portrait from "../assets/img.jpg";
 
@@ -76,7 +77,7 @@ export const scope = [
     note: "Software engineer through to lead",
   },
   {
-    value: 11,
+    value: 12,
     label: "Projects shipped",
     note: "Web, mobile-ready, desktop and design",
   },
@@ -174,6 +175,32 @@ export const projects: Project[] = [
       { label: "Provider site", href: "https://app.vanforce.com.au/provider" },
     ],
     image: vanforce,
+  },
+  {
+    title: "Restaurant Template Studio",
+    year: "2026",
+    kind: "Restaurant template platform",
+    category: "Website",
+    role: "Lead Developer",
+    scope: "Template discovery and device previews",
+    brief:
+      "A restaurant website template platform where businesses can browse designs, search and filter the collection, and explore live demos before choosing a template.",
+    detail:
+      "I developed a complete showcase for restaurant website templates, bringing discovery, package information and template previews into one platform. Visitors can compare designs across desktop, tablet and mobile layouts, open live demos, and choose a starting point for their restaurant's website.",
+    responsibilities: [
+      "Built the restaurant template collection and browsing experience",
+      "Added template search and category and package filters",
+      "Created desktop, tablet and mobile preview experiences",
+      "Connected template details with live demos and selection enquiries",
+    ],
+    hardParts: [
+      "Presenting visually different restaurant designs in a consistent collection",
+      "Making it easy to compare templates across screen sizes",
+      "Keeping template discovery, previews and selection clear on mobile",
+    ],
+    stack: ["Next.js", "React", "Tailwind CSS", "Vercel"],
+    live: "https://restaurant-templates-iota.vercel.app/#/templates",
+    image: restaurantTemplates,
   },
   {
     title: "Pretty Woman Beauty Parlour",

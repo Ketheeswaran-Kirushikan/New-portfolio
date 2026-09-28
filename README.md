@@ -20,8 +20,9 @@ The app remains a static Vite site and retains its section anchor routes.
 
 - `src/data/profile.ts`: identity, contact details, résumé URL, statistics, services,
   projects, career history, grouped skills, passions, and qualifications.
-- `src/assets/`: original portrait and project screenshots, including Vanforce and
-  Pretty Woman. Previous project assets are preserved even when not displayed.
+- `src/assets/`: original portrait and project screenshots, including Vanforce,
+  Pretty Woman, and Restaurant Template Studio's restaurant template collection.
+  Previous project assets are preserved even when not displayed.
 - Project actions are rendered only when the corresponding `live`, `repo`, or
   `portals` data is present. Vanforce has separate user, admin, and provider links.
 - Education and certificates have separate data arrays, page sections, and navigation
@@ -40,7 +41,7 @@ theme remains available. Theme choice uses the `kk-theme-v4` local storage key.
 Font fallbacks keep the page usable if Google Fonts is unavailable.
 
 `src/lib/motion.ts` centralises entrance timing, stagger, easing, spring settings,
-and the 750ms project selection transition. `MotionPreferences.tsx` provides a
+and the 750ms project selection transition. `MotionPreferences.tsx` provides
 automatic support for live changes in the system reduced-motion preference.
 There are no animation pause buttons or stored manual pause settings. The hero
 entrance does not replay when preferences change.
@@ -58,6 +59,10 @@ System reduced motion disables these animations.
   statistics, and direct project/contact/résumé actions.
 - Services: editorial split with a desktop sticky heading and glass rows.
 - Projects: selectable 3D volumes plus an always-present HTML project collection.
+  `ProjectPreview.tsx` opens a split layout with a contained screenshot and full-size
+  image link, immediate live/source/portal actions, and keyboard-accessible Overview,
+  My role, and Build details tabs. Close and previous/next controls stay visible.
+  Mobile uses one scroll area; switching projects resets the overview and scroll.
 - Experience: scroll progress timeline and native expandable role details.
 - Skills: nine groups covering leadership and interviewing, Next.js and frontend
   development, backend, data, delivery, mobile/AI, animation, prompt engineering,
@@ -128,6 +133,11 @@ the older portfolio. GMB, IT Pathway, and BookHeaven remain removed from the dis
   the user's latest update. Animation tools reflect the portfolio's existing
   Motion, Three.js, and CSS implementation. No interview counts, published books,
   sporting awards, or extra animation packages are claimed.
+- **Restaurant templates:** Restaurant Template Studio was added as a completed
+  project from the user's supplied live URL. Its collection, search/filter controls,
+  device previews, and screenshot were inspected on the deployed site. Next.js,
+  React, Tailwind CSS, and Vercel are evidenced by that deployment; no backend or
+  payment integration is claimed. The existing shipped-project total increased by one.
 - **Qualification results:** degree grade/GPA, HND result, certificate issuers/dates,
   and IELTS marks remain existing portfolio content; the LinkedIn PDF does not
   independently verify them. Its 2011–2019 school-attendance range is kept distinct
