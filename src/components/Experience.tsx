@@ -4,6 +4,7 @@ import { track, type Role } from "../data/profile";
 import { Reveal, Spread } from "./ui";
 import { useMotionPreferences } from "./MotionPreferences";
 import { motionSettings } from "../lib/motion";
+import { Mentorship } from "./Mentorship";
 
 export function Experience() {
   const ref = useRef<HTMLDivElement>(null);
@@ -20,6 +21,7 @@ export function Experience() {
       label="The journey"
       title="Experience that shapes the work."
       lede="Software engineering, technical leadership, and a grounding in the businesses that depend on both."
+      after={<Mentorship />}
     >
       <div className="timeline" ref={ref}>
         <div className="timeline-line" aria-hidden="true">

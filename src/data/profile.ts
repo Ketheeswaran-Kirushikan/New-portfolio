@@ -17,6 +17,12 @@ import prettyWoman from "../assets/pretty-woman.png";
 import restaurantTemplates from "../assets/restaurant-templates.webp";
 import crickChat from "../assets/c.png";
 import portrait from "../assets/img.jpg";
+import orientationSpeaking from "../assets/community/uki-orientation-speaking.webp";
+import orientationSession from "../assets/community/uki-orientation-session.webp";
+import orientationGroup from "../assets/community/uki-orientation-group.webp";
+import orientationSpeakingSmall from "../assets/community/uki-orientation-speaking-small.webp";
+import orientationSessionSmall from "../assets/community/uki-orientation-session-small.webp";
+import orientationGroupSmall from "../assets/community/uki-orientation-group-small.webp";
 
 export const identity = {
   name: "Kirushikan Ketheeswaran",
@@ -468,6 +474,47 @@ export const track: Role[] = [
     stack: ["Banking operations", "Customer service"],
   },
 ];
+
+/* --- MENTORSHIP & COMMUNITY ----------------------------------- */
+
+// User-supplied activities and orientation photos. No exact event dates supplied.
+export const mentorship = {
+  heading: "Sharing what I’ve learned.",
+  introduction:
+    "Supporting students through career guidance, orientation, and viva sessions at Uki.",
+  orientation: {
+    title: "Career guidance & orientation",
+    audience: "Uki · New batch",
+    description:
+      "Conducted a career guidance and orientation session for Uki’s incoming batch, helping new students explore a path into the tech industry.",
+    photos: [
+      {
+        src: orientationSpeaking,
+        small: orientationSpeakingSmall,
+        alt: "Kirushikan speaking during the career guidance and orientation session at Uki",
+        caption: "Sharing career guidance with Uki’s new batch.",
+      },
+      {
+        src: orientationSession,
+        small: orientationSessionSmall,
+        alt: "Kirushikan addressing the new batch at Uki’s orientation session",
+        caption: "A moment from the orientation session.",
+      },
+      {
+        src: orientationGroup,
+        small: orientationGroupSmall,
+        alt: "Kirushikan with fellow attendees at the Uki orientation session",
+        caption: "Together at Uki’s orientation session.",
+      },
+    ],
+  },
+  viva: {
+    title: "Viva & student assessment",
+    audience: "Uki · Graduating batch",
+    description:
+      "Conducted a viva session for Uki’s recent graduating batch, assessing students’ understanding through discussion.",
+  },
+};
 
 /* --- SKILLS --------------------------------------------------- */
 

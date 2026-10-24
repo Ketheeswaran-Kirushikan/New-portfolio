@@ -80,6 +80,7 @@ export function Spread({
   title,
   lede,
   children,
+  after,
 }: {
   id: string;
   index: string;
@@ -87,6 +88,7 @@ export function Spread({
   title: string;
   lede?: string;
   children: ReactNode;
+  after?: ReactNode;
 }) {
   return (
     <section id={id} className="section-shell">
@@ -100,6 +102,7 @@ export function Spread({
         </header>
         <div className="min-w-0">{children}</div>
       </div>
+      {after && <div className="page-width">{after}</div>}
     </section>
   );
 }

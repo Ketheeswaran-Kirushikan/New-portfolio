@@ -59,7 +59,7 @@ export default function ProjectVolumes({
     const key = new THREE.DirectionalLight(0xf2fbff, 2.8);
     key.position.set(-3, 6, 8);
     scene.add(key);
-    const rim = new THREE.DirectionalLight(0xa78bfa, 1.4);
+    const rim = new THREE.DirectionalLight(0x7851a9, 1.4);
     rim.position.set(6, 3, -3);
     scene.add(rim);
 
@@ -97,10 +97,10 @@ export default function ProjectVolumes({
       art.width = 768;
       art.height = 1024;
       const ctx = art.getContext("2d")!;
-      const accent = index % 2 === 0 ? "#5ce1e6" : "#b6a2fa";
+      const accent = index % 2 === 0 ? "#00ffff" : "#bb93ef";
       const gradient = ctx.createLinearGradient(0, 0, 768, 1024);
-      gradient.addColorStop(0, index % 2 === 0 ? "#162d3a" : "#262c44");
-      gradient.addColorStop(1, "#0b131e");
+      gradient.addColorStop(0, index % 2 === 0 ? "#092525" : "#2b1b3e");
+      gradient.addColorStop(1, "#050505");
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, 768, 1024);
       ctx.fillStyle = accent;
@@ -111,7 +111,7 @@ export default function ProjectVolumes({
         46,
         67,
       );
-      ctx.fillStyle = "#f1f5f9";
+      ctx.fillStyle = "#f7f5fa";
       ctx.font = "600 49px sans-serif";
       const words = project.title.split(" ");
       let line = "",
@@ -125,17 +125,17 @@ export default function ProjectVolumes({
         } else line = candidate;
       });
       ctx.fillText(line, 46, y);
-      ctx.fillStyle = "#a7b4c7";
+      ctx.fillStyle = "#aaa3b5";
       ctx.font = "22px sans-serif";
       ctx.fillText(project.kind, 46, 305);
-      ctx.fillStyle = "#080c12";
+      ctx.fillStyle = "#050505";
       ctx.fillRect(35, 355, 698, 456);
       ctx.strokeStyle = "#ffffff25";
       ctx.strokeRect(35, 355, 698, 456);
       ctx.fillStyle = accent;
       ctx.font = "500 21px monospace";
       ctx.fillText(project.category.toUpperCase(), 46, 887);
-      ctx.fillStyle = "#a7b4c7";
+      ctx.fillStyle = "#aaa3b5";
       ctx.font = "20px sans-serif";
       ctx.fillText(project.year + "  /  " + project.role, 46, 933);
       const texture = new THREE.CanvasTexture(art);
@@ -168,11 +168,11 @@ export default function ProjectVolumes({
       // Separate boards, page block and spine preserve the volume's real depth.
       const boardGeometry = new THREE.BoxGeometry(1.53, 2.2, 0.035);
       const edge = new THREE.MeshStandardMaterial({
-        color: index % 2 ? 0x776b9e : 0x3a707b,
+        color: index % 2 ? 0x7851a9 : 0x008f8f,
         roughness: 0.7,
       });
       const paper = new THREE.MeshStandardMaterial({
-        color: 0xb1bbca,
+        color: 0xd0c9db,
         roughness: 1,
       });
       const front = new THREE.MeshBasicMaterial({ map: cover(project, index) });

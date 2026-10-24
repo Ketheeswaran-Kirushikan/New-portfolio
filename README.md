@@ -19,10 +19,13 @@ The app remains a static Vite site and retains its section anchor routes.
 ## Content and assets
 
 - `src/data/profile.ts`: identity, contact details, résumé URL, statistics, services,
-  projects, career history, grouped skills, passions, and qualifications.
+  projects, career history, community activities, grouped skills, passions, and qualifications.
 - `src/assets/`: original portrait and project screenshots, including Vanforce,
   Pretty Woman, and Restaurant Template Studio's restaurant template collection.
   Previous project assets are preserved even when not displayed.
+- `src/assets/community/`: web-ready copies of the three supplied Uki orientation
+  photos, in 640px and 1600px WebP sizes. Original files outside the repository
+  are unchanged. The gallery uses responsive sources and lazy loading.
 - Project actions are rendered only when the corresponding `live`, `repo`, or
   `portals` data is present. Vanforce has separate user, admin, and provider links.
 - Education and certificates have separate data arrays, page sections, and navigation
@@ -48,7 +51,7 @@ entrance does not replay when preferences change.
 
 `Modal.tsx` uses native dialogs, an explicit Tab cycle, Escape support, body
 scroll locking, and focus restoration. The same dialog is used for mobile
-navigation, project details, and optional certificate viewing. `AnimatePresence`
+navigation, project details, orientation photos, and optional certificate viewing. `AnimatePresence`
 keeps each dialog mounted for its fade/scale exit before restoring focus and
 scrolling. Project changes animate directionally inside the stable toolbar.
 System reduced motion disables these animations.
@@ -63,7 +66,10 @@ System reduced motion disables these animations.
   image link, immediate live/source/portal actions, and keyboard-accessible Overview,
   My role, and Build details tabs. Close and previous/next controls stay visible.
   Mobile uses one scroll area; switching projects resets the overview and scroll.
-- Experience: scroll progress timeline and native expandable role details.
+- Experience: scroll progress timeline and native expandable role details, followed
+  by a Mentorship & community section (`#community`). Career guidance and orientation
+  at Uki have a three-photo gallery with an animated, keyboard-accessible viewer.
+  The viva assessment entry is text-only until its own photos are supplied.
 - Skills: nine groups covering leadership and interviewing, Next.js and frontend
   development, backend, data, delivery, mobile/AI, animation, prompt engineering,
   and design. Java remains foundational; Next.js is an established skill.
@@ -133,6 +139,11 @@ the older portfolio. GMB, IT Pathway, and BookHeaven remain removed from the dis
   the user's latest update. Animation tools reflect the portfolio's existing
   Motion, Three.js, and CSS implementation. No interview counts, published books,
   sporting awards, or extra animation packages are claimed.
+- **Uki community activities:** career guidance/orientation for the new batch and
+  a viva session for the recent graduating batch come from the user's update.
+  All three supplied photos are presented as orientation photos, as described
+  by the user. No event dates, batch numbers, attendance counts, formal appointments,
+  or viva photographs are inferred from the photo backgrounds or filenames.
 - **Restaurant templates:** Restaurant Template Studio was added as a completed
   project from the user's supplied live URL. Its collection, search/filter controls,
   device previews, and screenshot were inspected on the deployed site. Next.js,
@@ -169,6 +180,10 @@ Inspected desktop and mobile screenshots and tested:
 - Project category filtering and mobile menu anchor navigation.
 - System reduced motion, changes while the page is open, and both theme choices.
 - Separate education/certificate content and native experience disclosures.
+- Uki orientation gallery at 320, 390, 768, 1024, and 1440 CSS pixels: all three
+  photos load and open, with no horizontal overflow. Verified previous/next buttons,
+  arrow keys, Tab containment, Escape/backdrop close, focus and scroll restoration,
+  animated exit, both themes, and reduced motion; no runtime exceptions.
 - Modal entrance, project switching, and delayed exit with focus restoration.
 - Mocked contact success/failure without sending messages.
 - WebGL context loss and unavailable-WebGL fallback.
