@@ -35,7 +35,7 @@ export function Certificates() {
                   <span className="certificate-icon" aria-hidden="true">
                     <Award size={24} />
                   </span>
-                  <span>{item.period}</span>
+                  {item.period && <span>{item.period}</span>}
                 </div>
                 <p className="certificate-issuer">{item.org}</p>
                 <h3>{item.title}</h3>

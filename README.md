@@ -149,16 +149,17 @@ the older portfolio. GMB, IT Pathway, and BookHeaven remain removed from the dis
   device previews, and screenshot were inspected on the deployed site. Next.js,
   React, Tailwind CSS, and Vercel are evidenced by that deployment; no backend or
   payment integration is claimed. The existing shipped-project total increased by one.
-- **Qualification results:** degree grade/GPA, HND result, certificate issuers/dates,
-  and IELTS marks remain existing portfolio content; the LinkedIn PDF does not
+- **Qualification results:** degree grade/GPA, HND result, and other certificate
+  issuers/dates remain existing portfolio content; the LinkedIn PDF does not
   independently verify them. Its 2011–2019 school-attendance range is kept distinct
   from the existing résumé's 2020 A-level qualification year.
 - **Engineers supported:** the existing figure of four was explicitly marked
   unverified. It is retained in the data with `needsVerification: true` and hidden
   from the public statistics until confirmed.
-- **IELTS:** the source score of Band 5.5 and individual marks are retained.
-  The previous unverified “CEFR B2” equivalency is omitted from the display because
-  no supporting certificate was supplied.
+- **IELTS:** IELTS Academic, Overall Band 6.0, comes from the user's latest update.
+  The previous General Training result, date, and individual marks are replaced.
+  No test date, component scores, CEFR equivalency, or certificate asset is claimed
+  for this result.
 - **Gas By Gas source link:** the current local `gasbygasFE` repository returned
   HTTP 200. The `gasbygasNextFront-end` link in the pasted older résumé returned
   HTTP 404 during review. The working current-source link is retained.

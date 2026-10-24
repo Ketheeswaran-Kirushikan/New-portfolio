@@ -695,7 +695,7 @@ export const passions: Passion[] = [
 export type Credential = {
   title: string;
   org: string;
-  period: string;
+  period?: string;
   result: string;
   detail: string;
   assetUrl?: string;
@@ -740,11 +740,11 @@ export const education: Credential[] = [
 
 export const certificates: Credential[] = [
   {
-    title: "IELTS General Training",
+    // Test type and overall score supplied by the user; date and component scores not supplied.
+    title: "IELTS Academic",
     org: "British Council · IDP · Cambridge English",
-    period: "May 2026",
-    result: "Band 5.5", // The previous CEFR equivalency was not supported by a certificate asset.
-    detail: "Listening 6.0, Writing 5.5, Reading 5.0, Speaking 5.0.",
+    result: "Overall Band 6.0",
+    detail: "Academic English language proficiency.",
   },
   {
     title: "Fundamentals of Digital Marketing",
